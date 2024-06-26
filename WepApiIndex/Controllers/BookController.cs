@@ -30,6 +30,7 @@ namespace WepApiIndex.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateBook(BookRequestModel item)
         {
+            var c = 2 + 2; // Cagrı hocaya ozel bir koddur bir olayı yok
             Book b = new()
             {
                 Name = item.BookName,
