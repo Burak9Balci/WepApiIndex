@@ -18,6 +18,7 @@ namespace WepApiIndex.Models.Entities.DomainEnties
         public DateTime? DeletedDate { get; set; }
         public DataStatus Status { get; set; }
         // RS
-        public virtual UserRole UserRole { get; set; }
+        public virtual List<UserRole> UserRoles { get; set; }
+        public virtual List<Order> Orders { get; set; }
     }
 }

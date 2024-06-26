@@ -3,13 +3,17 @@ using WepApiIndex.Models.Entities.DomainEnties;
 
 namespace WepApiIndex.Models.Configurations
 {
-    public class AppRoleConfiguration : BaseConfiguration<AppRole>
+    public class UserRoleConfiguration : BaseConfiguration<UserRole>
     {
-        public override void Configure(EntityTypeBuilder<AppRole> builder)
+        public override void Configure(EntityTypeBuilder<UserRole> builder)
         {
             base.Configure(builder);
             builder.Ignore(x =>x.ID);
-            builder.HasMany(x =>x.UserRoles).WithOne(x => x.Role).HasForeignKey(x => x.RoleId).IsRequired();
+            builder.HasKey(x => new
+            {
+                x.RoleId,
+                x.UserId
+            });
         }
     }
 }

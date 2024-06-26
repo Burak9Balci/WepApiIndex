@@ -17,6 +17,6 @@ namespace WepApiIndex.Models.Entities.DomainEnties
             Status = DataStatus.Inserted;
         }
         //RS
-        public virtual UserRole UserRole { get; set; }
+        public virtual List<UserRole> UserRoles { get; set; }
     }
 }
