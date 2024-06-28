@@ -16,5 +16,6 @@ namespace WepApiIndex.Models.Entities.DomainEnties
         public virtual Category Category { get; set; }
         public virtual Editor Editor { get; set; }
         public virtual BookShelf BookShelf { get; set; }
+        public virtual List<OrderDetail> OrderDetails { get; set; }
     }
 }
